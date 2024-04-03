@@ -1,6 +1,5 @@
 package bookstore.shop.domain.Item;
 
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.Getter;

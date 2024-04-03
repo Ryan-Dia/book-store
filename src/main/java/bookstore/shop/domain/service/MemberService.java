@@ -2,14 +2,11 @@ package bookstore.shop.domain.service;
 
 import bookstore.shop.domain.Member;
 import bookstore.shop.domain.repository.MemberRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.InputStream;
-import java.util.Arrays;
+
 import java.util.List;
 
 @Service

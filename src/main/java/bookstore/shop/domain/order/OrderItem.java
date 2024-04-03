@@ -1,7 +1,6 @@
 package bookstore.shop.domain.order;
 
 import bookstore.shop.domain.Item.Item;
-import bookstore.shop.domain.order.Order;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
