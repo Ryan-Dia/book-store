@@ -3,15 +3,16 @@ package bookstore.shop.domain.repository;
 import bookstore.shop.domain.Member;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em; // spring이 em을 만들어서 주입해줌
+    private final EntityManager em; // spring이 em을 만들어서 주입해줌
 
     public void save(Member member) {
         em.persist(member);
