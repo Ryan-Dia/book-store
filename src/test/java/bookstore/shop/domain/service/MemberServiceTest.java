@@ -1,7 +1,8 @@
 package bookstore.shop.domain.service;
 
 import bookstore.shop.domain.Member;
-import bookstore.shop.domain.repository.MemberRepository;
+import bookstore.shop.repository.MemberRepository;
+import bookstore.shop.service.MemberService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -17,7 +18,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @Transactional // 데이터 변경해야 하니까 이게 있어야 데이터가 롤백됨
 class MemberServiceTest {
 
-    @Autowired MemberService memberService;
+    @Autowired
+    MemberService memberService;
     @Autowired MemberRepository memberRepository;
 
     @Test

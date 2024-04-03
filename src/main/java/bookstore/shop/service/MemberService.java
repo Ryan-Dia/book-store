@@ -1,7 +1,7 @@
-package bookstore.shop.domain.service;
+package bookstore.shop.service;
 
 import bookstore.shop.domain.Member;
-import bookstore.shop.domain.repository.MemberRepository;
+import bookstore.shop.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

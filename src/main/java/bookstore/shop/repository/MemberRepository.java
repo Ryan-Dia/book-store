@@ -1,4 +1,4 @@
-package bookstore.shop.domain.repository;
+package bookstore.shop.repository;
 
 import bookstore.shop.domain.Member;
 import jakarta.persistence.EntityManager;
