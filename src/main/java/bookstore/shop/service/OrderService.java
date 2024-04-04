@@ -8,6 +8,7 @@ import bookstore.shop.domain.order.OrderItem;
 import bookstore.shop.repository.ItemRepository;
 import bookstore.shop.repository.MemberRepository;
 import bookstore.shop.repository.OrderRepository;
+import bookstore.shop.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -68,7 +69,7 @@ public class OrderService {
     /**
      * 검색
      */
-//    public List<Order> findOrders(OrderSearch orderSearch) {
-//        return orderRepository.findAll(orderSearch);
-//    }
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAll(orderSearch);
+    }
 }
