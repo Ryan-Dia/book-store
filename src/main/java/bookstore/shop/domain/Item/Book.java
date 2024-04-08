@@ -25,4 +25,16 @@ public class Book extends Item{
 
         return book;
     }
+
+    public static Book update(BookForm form) {
+        Book book = new Book();
+        book.setId(form.getId());
+        book.setName(form.getName());
+        book.setPrice(form.getPrice());
+        book.setStockQuantity(form.getStockQuantity());
+        book.setAuthor(form.getAuthor());
+        book.setIsbn(form.getIsbn());
+
+        return book;
+    }
 }
