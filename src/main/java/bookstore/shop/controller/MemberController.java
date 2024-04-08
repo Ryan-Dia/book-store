@@ -22,10 +22,10 @@ public class MemberController {
     @GetMapping("/members/new")
     public String createForm(Model model) {
         model.addAttribute("memberForm", new MemberForm());
-        return "members/createMmeberForm";
+        return "members/createMemberForm";
     }
 
-    @PostMapping("/member/new")
+    @PostMapping("/members/new")
     public String create(@Valid MemberForm form, BindingResult result) {
 
         if (result.hasErrors()) {

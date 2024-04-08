@@ -1,8 +1,9 @@
 package bookstore.shop.controller;
 
 import lombok.Getter;
+import lombok.Setter;
 
-@Getter
+@Getter @Setter
 public class BookForm {
         private Long id;
 
