@@ -61,10 +61,14 @@ public class ItemController {
     }
 
     @PostMapping("items/{itemId}/edit")
-    public String updateItem(@PathVariable String itemId, @ModelAttribute("form") BookForm form) {
+    public String updateItem(@PathVariable Long itemId, @ModelAttribute("form") BookForm form) {
 
-        Book book = Book.update(form);
+
+        Book book =  Book.update(form);
         itemService.saveItem(book);
+
+        // or
+        // itemService.updateItem(itemId, form);  이렇게도 할 수 있으나 종류가 여러가지면 어카지?
 
         return "redirect:/items";
     }

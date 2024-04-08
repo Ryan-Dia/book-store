@@ -1,5 +1,6 @@
 package bookstore.shop.service;
 
+import bookstore.shop.controller.BookForm;
 import bookstore.shop.domain.Item.Item;
 import bookstore.shop.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,15 @@ public class ItemService {
     @Transactional // 메서드에 가까운게 우선권을 가짐
     public void saveItem(Item item) {
         itemRepository.save(item);
+    }
+
+    @Transactional
+    public void updateItem(Long itemId, BookForm param) {
+        Item findItem = itemRepository.findOne(itemId);
+        findItem.setPrice(param.getPrice());
+        findItem.setName(param.getName());
+        findItem.setStockQuantity(param.getStockQuantity());
+        //itemRepository.save(findItem); -> 할 필요가 없음
     }
 
     public List<Item> findItems() {
