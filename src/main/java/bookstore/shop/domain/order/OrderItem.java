@@ -1,6 +1,7 @@
 package bookstore.shop.domain.order;
 
 import bookstore.shop.domain.Item.Item;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
